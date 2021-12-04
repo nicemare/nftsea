@@ -1,11 +1,5 @@
 const puppeteer = require('puppeteer')
-//const puppeteer = require('puppeteer-extra')
-const AdblockerPlugin = require('puppeteer-extra-plugin-adblocker')
-//puppeteer.use(AdblockerPlugin())
-const fs = require('fs');
 const delay = require('delay');
-// var randomize = require('randomatic');
-const randomName = require('random-name');
 const { devices } = puppeteer;
 const iPhoneX = devices["iPhone X"];
 
@@ -18,11 +12,6 @@ const iPhoneX = devices["iPhone X"];
   const context = await browser.createIncognitoBrowserContext();  
   const page = await context.newPage();
  
-  // let firstName = randomName.first().toString()
-  //     let lastName = randomName.last().toString()
-  //     let numbers = Math.floor(Math.random() * 1000);
-  //     let userName = randomName.first().toString() + randomName.last().toString() + numbers 
-  //     const passWord = "allif404"
 console.log('====================================')
 console.log('Auto Reff NFTSEA v1.0 by @allif.mh')
 console.log('====================================')
@@ -36,7 +25,6 @@ console.log('1. sukses membuka eth generator')
   await page.waitForSelector('#app > div > div.main-container > section > div > div.scrollBox > div > div > div > div > div > div.inputBox > div:nth-child(1) > div.el-input-group__append > button > span', {setTimeout:100000})
   await page.click('#app > div > div.main-container > section > div > div.scrollBox > div > div > div > div > div > div.inputBox > div:nth-child(1) > div.el-input-group__append > button > span')
 console.log('2. sukses generate eth')
-
 
 //await input.focus()
 await page.click('#app > div > div.main-container > section > div > div.scrollBox > div > div > div > div > div > div.inputBox > div:nth-child(1) > div.el-input-group__append > button')
@@ -77,8 +65,7 @@ async function autoScroll(page){
             }, 120);
         });
     });}
-     fs.appendFileSync("ethreff.txt", `\n ethreff : ${eth}\n `);
-console.log('eth reff telah disimpan')
+ 
 console.log('delay 10 menit')
 await delay(100000);
  await browser.close()
