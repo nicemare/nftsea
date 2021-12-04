@@ -1,8 +1,9 @@
 # NFTSEA AUTOREFF
-TOOLS : 
+# TOOLS : 
 * https://nodejs.org/en/download/
 * https://git-scm.com/
-USAGE :
+
+# USAGE :
 * git clone https://github.com/nicemare/nftsea
 * cd nftsea
 * npm install puppeteer
